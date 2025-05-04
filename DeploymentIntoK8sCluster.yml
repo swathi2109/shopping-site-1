@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: shopping-app-container
-          image: madandevops2024/flipkartapp
+          image: ramarao388/flipkartapp
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
