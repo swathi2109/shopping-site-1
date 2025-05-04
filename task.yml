@@ -11,9 +11,9 @@
        src: target
        dest: /home/ansadmin
     - name : Build image
-      command: docker build -t madandevops2024/flipkartapp .
+      command: docker build -t ramdevops2024/flipkartapp .
     - name : Push Docker Image
-      command: docker push madandevops2024/flipkartapp
+      command: docker push ramdevops2024/flipkartapp
 - name: Deployment into Kubernetes Cluster
   hosts: eks
   tasks:
