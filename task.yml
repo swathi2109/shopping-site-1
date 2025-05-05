@@ -5,11 +5,11 @@
     - name: Copy Dockerfile
       copy:
        src: Dockerfile
-       dest: /home/ansadmin
+       dest: /home/admin-user
     - name: Copy WAR file
       copy:
        src: target
-       dest: /home/ansadmin
+       dest: /home/admin-user
     - name : Build image
       command: docker build -t ramarao388/flipkartapp .
     - name : Push Docker Image
@@ -20,11 +20,11 @@
    - name: 
      copy:
        src: DeploymentIntoK8sCluster.yml
-       dest: /home/ansadmin
+       dest: /home/admin-user
    - name: 
      copy:
        src: LB-Service.yml
-       dest: /home/ansadmin
+       dest: /home/admin-user
    - name : K8S Deployment
      command: kubectl apply -f DeploymentIntoK8sCluster.yml
    - name : LB Service
